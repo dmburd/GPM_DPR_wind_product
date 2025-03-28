@@ -84,7 +84,7 @@ def extract_segment_from_h5_file(
 def downsample_swath_points(
     h5_fpath: Path,
     selection: DatesCoordsSelection,
-):
+) -> H5ExtractedNdarrays:
     h5 = h5py.File(h5_fpath, "r")
     # print_hdf5_schema(h5)
 

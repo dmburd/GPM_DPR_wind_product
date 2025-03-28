@@ -1,6 +1,7 @@
 # HDF files
 *.h5
-
+# Saved npz files
+*.npz
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

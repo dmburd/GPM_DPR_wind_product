@@ -12,6 +12,7 @@ from omegaconf import DictConfig
 from tqdm import tqdm
 
 from app.api.schemas.dates_coords_selection import DatesCoordsSelection
+from app.utils.geometry import check_swath_intersects_roi
 
 
 def get_all_links_to_hdf5(
@@ -134,8 +135,25 @@ def select_h5_urls_by_coords(
     h5_urls: list[str],
     selection: DatesCoordsSelection,
     fname_to_downsampled_points: dict[str, np.ndarray],
-):
-    return h5_urls
+) -> list[str]:
+    if len(h5_urls) == 0:
+        return []
+
+    input_fpaths_prefix = "/".join(h5_urls[0].split("/")[:-1])
+    input_fnames = [h5_url.split("/")[-1] for h5_url in h5_urls]
+    output_fnames = [
+        fname
+        for fname in input_fnames
+        if check_swath_intersects_roi(
+            fname_to_downsampled_points[fname],
+            selection,
+        )
+    ]
+
+    output_h5_urls = [
+        input_fpaths_prefix + "/" + output_fname for output_fname in output_fnames
+    ]
+    return output_h5_urls
 
 
 def download_missing_h5_files(
