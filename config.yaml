@@ -1,0 +1,30 @@
+url_webpage_all_tracks: "https://sat.ipfran.ru/GPM_Ku_mss_U10/"
+use_gcs_bucket: true
+# ^ set to 'true' if you want to use the tracks' files
+#   that were uploaded to a GCS bucket in advance;
+#   see './.env.example'
+url_npz_track_to_downsampled_swath_points: "https://github.com/dmburd/GPM_DPR_wind_product/releases/download/v1.0.0/track_fname_to_downsampled_points.npz"
+# ^ contains the mapping like {track_file_name1: downsampled_swath1_points, ...}
+#   for faster filtering of tracks that intersect with the specified region of interest
+
+hdf_fname_extension: ".h5"
+
+hdf_caching:
+  dir: "./cached_h5_files"
+  remove_cached_files: false
+  max_num_cached_files: 1600
+
+hdf_fnames_parsing:
+  delimiter: '_'
+  start_timestamp_part_idx: 4
+  # ^ the part '1701010514' corresponds to 0-based idx = 4 for
+  #   'mss_U10_NGPMCOR_DPR_1701010514_0646_016158_L2S_DD2_05A.h5'
+  track_number_part_idx: 6
+
+hdf_observable:
+  value_name: "U10"
+  # ^ this value will be represented by the marker color
+  value_invalid: 9999
+  # ^ don't visualize the observable in the points where its value is >= value_invalid
+  upper_threshold: 30.0
+  # ^ maximum wind speed (U10) value
