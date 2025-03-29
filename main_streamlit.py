@@ -8,5 +8,5 @@ if __name__ == "__main__":
 
     streamlit_app(
         config=config,
-        submit_url="http://localhost:8000/dates_coords_selection/",
+        submit_url="http://backend:8000/dates_coords_selection/",
     )
