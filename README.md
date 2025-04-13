@@ -3,9 +3,9 @@
 ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## 📖 Description
-This project presents an interactive tool for visualizing the wind speed data obtained from the measurements of Dual-frequency Precipitation Radar (DPR) onboard the Global Precipitation Measurement mission (GPM) satellite (see the [website](https://global.jaxa.jp/projects/sat/gpm/)) according to the method outlined in the [paper](https://doi.org/10.3390/rs13224565).
+This project presents an interactive tool for visualizing the wind speed data obtained from the measurements of Dual-frequency Precipitation Radar (DPR) onboard the Global Precipitation Measurement mission (GPM) satellite (see the [JAXA website](https://global.jaxa.jp/projects/sat/gpm/)) according to the method outlined in the [paper](https://doi.org/10.3390/rs13224565).
 
-This data can be useful for scientists interested in investigating wind energy resources, processes in the ocean boundary layer, validation of wind speed data obtained from other sources.
+This data can be useful for scientists interested in investigating wind energy resources, processes in the ocean boundary layer, or validation of wind speed data obtained from other sources.
 
 ## 🚀 Deployment
 
@@ -56,7 +56,7 @@ You can use the interactive tools for the plot on the left:
  - `Box Zoom` for zooming in the selected bounding box,
  - `Wheel Zoom` for zooming in using mouse (the aspect ratio will be preserved),
  - `Reset` the view to the original region,
- - `Save` to save the plot to a PNG file,
+ - `Save` the plot to a PNG file,
  - (optionally) `Hover` (can be turned off if it is hindering the visualization).
 
 ## 📧 Contact
