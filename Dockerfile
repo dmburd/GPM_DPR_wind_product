@@ -1,4 +1,5 @@
-FROM continuumio/miniconda3:latest
+FROM continuumio/miniconda3:25.1.1-2
+
 
 WORKDIR /webapp
 
