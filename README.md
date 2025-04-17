@@ -11,8 +11,8 @@ This data can be useful for scientists interested in investigating wind energy r
 
 The web app consists of the backend (written using FastAPI) and the frontend (written using Streamlit). If you want to deploy the app, do the following:
 
-1. Clone the repo
-2. Install [Docker](https://docs.docker.com/engine/install/), start the service. Install [Docker Compose](https://docs.docker.com/compose/install/)
+1. Install [Docker](https://docs.docker.com/engine/install/), start the service. Install [Docker Compose](https://docs.docker.com/compose/install/)
+2. Clone the repo, `cd` to the `GPM_DPR_wind_product` directory
 3. Run `docker compose up --build`
 4. The web interface will be available at `http://<ip_or_hostname>:8501/`
 
