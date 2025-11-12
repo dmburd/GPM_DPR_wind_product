@@ -1,0 +1,31 @@
+name: app_env
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Conda packages
+  - cartopy
+  - pip
+  - python==3.10
+
+  # Pip packages
+  - pip:
+    - beautifulsoup4
+    - bokeh==2.4.3
+    - fastapi
+    - google-cloud-storage
+    - h5py
+    - hydra-core
+    - isort
+    - matplotlib
+    - numpy==1.23.5
+    - pre-commit
+    - pydantic
+    - python-dotenv
+    - ruff
+    - scikit-learn
+    - shapely
+    - streamlit
+    - tqdm
+    - uvicorn
